@@ -1,8 +1,11 @@
 from pathlib import Path
 import pandas as pd
 
-Data_path = Path(__file__).parent/ "data"
-print(Data_path / "Prog_book.csv")
+data_path = Path(__file__).parent / "data"
+print(data_path / "prog_book.csv")
 
-df = pd.read_csv(Data_path / "Prog_book.csv")
+df = pd.read_csv(data_path / "prog_book.csv")
 print(df.head())
+
+print(df.info())
+df.head().to_csv(data_path / "prog_book_head.csv")

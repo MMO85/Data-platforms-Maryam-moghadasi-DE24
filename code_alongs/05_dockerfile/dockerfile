@@ -1,0 +1,10 @@
+FROM python:3.13
+
+WORKDIR /app
+
+COPY . .
+
+# Install bash in the container
+RUN apt-get update && apt-get install -y bash && pip install -r requirements.txt
+
+CMD [ "python", "main.py" ]
