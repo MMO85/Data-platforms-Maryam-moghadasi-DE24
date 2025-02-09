@@ -7,11 +7,13 @@ data_path = Path(__file__).parents[1] / "data"
 
 #print(data_path)
 
+# read in jokes.json through its absolut path
 with open(data_path / "jokes.json", "r") as file:
     jokes = json.load(file)
 
 #pprint(jokes)
-
+#here is a form of entry point for interacting kafka
+#localhost 9092 is port mapped to broker container
 app = Application(broker_address="localhost:9092", consumer_group="text_splitter")
 jokes_topic = app.topic(name = "jokes", value_serializer= "json")
 #print(jokes_topic)
