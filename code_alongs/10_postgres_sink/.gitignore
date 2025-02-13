@@ -1,0 +1,29 @@
+# Virtual environment
+venv/
+.venv/
+# Python cache files
+__pycache__/
+*.py[cod]
+# Environment variables
+.env
+# Log files
+*.log
+logs/
+*.out
+*.tmp
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Docker files
+docker-compose.override.yml
+*.pid
+# Database & data files
+*.sqlite3
+*.db
+*.csv
+*.json
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+.pypirc
+kafka_data
